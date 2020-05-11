@@ -12,8 +12,8 @@ namespace OpenGLTutorial
 {
     namespace HelloTriangle
     {
-        constexpr const char* vertexShaderPath("Shaders\\HelloTriangle\\vertex.glsl");
-        constexpr const char* fragmentShaderPath("Shaders\\HelloTriangle\\fragment.glsl");
+        constexpr const char* vertexShaderPath("..\\shaders\\HelloTriangle\\vertex.glsl");
+        constexpr const char* fragmentShaderPath("..\\shaders\\HelloTriangle\\fragment.glsl");
 
         class RendererBase
         {

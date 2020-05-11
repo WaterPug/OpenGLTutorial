@@ -24,6 +24,8 @@ namespace OpenGLTutorial
         bool isWireframeEnabled() const { return m_wireframeEnabled; }
         void toggleWireframe() { m_wireframeEnabled = !m_wireframeEnabled; }
 
+        Shader* getShader() const { return m_shaders.get(); }
+
     private:
         SDL_Window* m_window;
         SDL_GLContext m_glContext;
