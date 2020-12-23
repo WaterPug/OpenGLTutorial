@@ -71,6 +71,11 @@ namespace OpenGLTutorial
                 std::cout << "triangle with texture draw\n";
                 renderer->drawTriangle1();
             }
+            else if (sdlEvent.key.keysym.sym == SDLK_1)
+            {
+                std::cout << "triangle with color only\n";
+                renderer->drawTriangle2();
+            }
             else if (sdlEvent.key.keysym.sym == SDLK_w)
             {
                 std::cout << "toggle wireframe\n";
@@ -102,6 +107,12 @@ namespace OpenGLTutorial
                 {
                     glBindTexture(GL_TEXTURE_2D, m_texture1);
                     glBindTexture(GL_TEXTURE_2D, m_texture2);
+                    glBindVertexArray(m_vao);
+                    glDrawArrays(GL_TRIANGLES, 0, 3);
+                };
+
+                void drawTriangle2() override
+                {
                     glBindVertexArray(m_vao);
                     glDrawArrays(GL_TRIANGLES, 0, 3);
                 };
